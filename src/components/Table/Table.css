@@ -1,0 +1,67 @@
+table {
+  font-family: Montserrat, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  border-collapse: collapse;
+  width: 100%;
+  cursor: default;
+  margin-top: 16px;
+}
+
+th,
+td {
+  padding: 16px;
+  padding-left: 32px;
+  padding-right: 32px;
+  text-align: left;
+}
+
+tr:hover {
+}
+
+.Left {
+  text-align: left !important;
+}
+
+.striped:nth-child(even) {
+  background-color: #f0f0f0;
+}
+.hover:hover {
+  /* background-color: #000000; */
+}
+
+body {
+  background-color: #dcdcdc;
+}
+
+.TableHeader {
+  color: #868686;
+  font-size: 12px;
+}
+.TableHeader th {
+  padding-top: 0px;
+  padding-bottom: 4px;
+  text-align: right;
+  font-weight: 600;
+}
+
+.TableCell {
+  border-bottom: 1px #0c120c solid;
+  text-align: right;
+}
+
+.TableCell:hover {
+  color: #4f2efe;
+}
+
+.TableCell:hover span {
+  color: #4f2efe;
+}
+
+.Red {
+  color: #fe2f74;
+}
+
+.Blue {
+  color: #4f2efe;
+}

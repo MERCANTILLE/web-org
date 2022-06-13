@@ -1,0 +1,25 @@
+.MenuStripe {
+  padding-left: 32px;
+  padding-right: 32px;
+  height: 92px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+
+.LeftSubmenu > * {
+  margin-right: 32px;
+}
+
+a {
+  text-decoration: none;
+  color: #4f2efe;
+  cursor: pointer;
+  font-family: Montserrat;
+  font-weight: 500;
+}
+
+a:hover {
+  font-weight: 600;
+}
