@@ -8,7 +8,7 @@ import {
   RightSubmenu,
 } from "../components";
 
-import { TableData, Columns } from "../data/TableData";
+import { RulesData, RulesColumns } from "../data/RulesData";
 
 const Rules = () => {
   return (
@@ -22,7 +22,12 @@ const Rules = () => {
           <Input placeholder="Filter"></Input>
         </RightSubmenu>
       </MenuStripe>
-      <Table data={TableData} columns={Columns} hover={true} striped={false} />
+      <Table
+        data={RulesData}
+        columns={RulesColumns}
+        hover={true}
+        striped={false}
+      />
     </div>
   );
 };

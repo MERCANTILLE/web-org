@@ -1,7 +1,7 @@
 const Token = "FVT";
 const Unit = "W";
 
-export const TableData = [
+export const RulesData = [
   {
     selected: false,
     source: "Twitter",
@@ -67,7 +67,7 @@ export const TableData = [
   },
 ];
 
-export const Columns = [
+export const RulesColumns = [
   // { field: "selected", header: "Selected" },
   { field: "source", header: "Source", left: true },
   { field: "action", header: "Action", command: "command", left: true },

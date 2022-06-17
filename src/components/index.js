@@ -4,3 +4,4 @@ export { default as Button } from "./Button";
 export { default as MenuStripe } from "./MenuStripe";
 export { LeftSubmenu, RightSubmenu } from "./MenuStripe";
 export { default as Input } from "./Input";
+export { default as Popup } from "./Popup";
