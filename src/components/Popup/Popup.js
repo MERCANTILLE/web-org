@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useState } from "react";
 import "./Popup.css";
 import { FiX } from "react-icons/fi";
 
@@ -30,19 +30,7 @@ const RightModalButton = ({ text, handleClick }) => {
   );
 };
 
-const Popup = ({ children, pages = 1, title = "Popup", shown }) => {
-  const [showModal, setShowModal] = React.useState(shown);
-
-  function closeModal() {
-    console.log("shown is " + shown);
-    console.log("showModal is " + showModal);
-    console.log("I'm closed now");
-    setShowModal(false);
-    shown = false;
-    console.log("shown is " + shown);
-    console.log("showModal is " + showModal);
-  }
-
+const Popup = ({ children, pages = 1, title = "Popup", shown, closeModal }) => {
   return (
     <div>
       {shown ? (

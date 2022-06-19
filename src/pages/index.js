@@ -15,10 +15,13 @@ const Home = () => {
   const [modalShown, setModalShown] = React.useState(false);
 
   function openModal() {
-    console.log(modalShown);
     setModalShown(true);
-    console.log(modalShown);
   }
+
+  function closeModal() {
+    setModalShown(false)
+  }
+  
   return (
     <div>
       <MenuStripe>
@@ -30,7 +33,7 @@ const Home = () => {
           <Input placeholder="Filter"></Input>
         </RightSubmenu>
       </MenuStripe>
-      <Popup shown={modalShown}></Popup>
+      <Popup shown={modalShown} closeModal={closeModal}></Popup>
       <Table
         data={EventsData}
         columns={EventsColumns}
