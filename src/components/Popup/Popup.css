@@ -7,10 +7,13 @@
   z-index: 100;
 }
 
+.WorkingArea {
+}
+
 .ModalTitle {
-  position: absolute;
-  left: 32px;
-  top: 32px;
+  /* position: relative; */
+  /* margin-left: 32px; */
+  /* top: 32px; */
   font-family: Montserrat;
   font-weight: 800;
   font-size: 24px;
@@ -18,10 +21,12 @@
 
 .Popup {
   position: fixed;
+  padding: 32px;
+  padding-bottom: 108px;
   left: 30%;
   top: 30%;
   background-color: #dcdcdc;
-  height: 300px;
+  /* height: 300px; */
   width: 640px;
   z-index: 10000;
 }
@@ -35,8 +40,13 @@
   stroke-linecap: round;
   position: absolute;
   right: 32px;
-  top: 32px;
+  /* top: 32px; */
   overflow: visible;
+  cursor: pointer;
+}
+
+.Disabled {
+  color: #868686;
 }
 
 .CloseIcon line {
@@ -50,11 +60,13 @@
 
 .LeftModalButton {
   left: 32px;
+  cursor: pointer;
   bottom: 24px;
 }
 
 .RightModalButton {
   right: 32px;
+  cursor: pointer;
   bottom: 24px;
 }
 

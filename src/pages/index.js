@@ -7,6 +7,9 @@ import {
   LeftSubmenu,
   RightSubmenu,
   Popup,
+  SelectorButton,
+  Subsection,
+  Header,
 } from "../components";
 
 import { EventsData, EventsColumns } from "../data/EventsData";
@@ -19,9 +22,9 @@ const Home = () => {
   }
 
   function closeModal() {
-    setModalShown(false)
+    setModalShown(false);
   }
-  
+
   return (
     <div>
       <MenuStripe>
@@ -33,7 +36,23 @@ const Home = () => {
           <Input placeholder="Filter"></Input>
         </RightSubmenu>
       </MenuStripe>
-      <Popup shown={modalShown} closeModal={closeModal}></Popup>
+      <Popup shown={modalShown} closeModal={closeModal}>
+        <div>
+          <Subsection heading={"Discord"}>
+            <SelectorButton text="Discord command"></SelectorButton>
+            <SelectorButton text="Discord reaction"></SelectorButton>
+          </Subsection>
+          <Subsection heading={"Influence.Vote"}>
+            <SelectorButton text="Track new org"></SelectorButton>
+          </Subsection>
+          <Subsection heading={"Dework"}>
+            <SelectorButton text="Track new org"></SelectorButton>
+          </Subsection>
+        </div>
+        <div>
+          <Subsection heading={"Discord"}>WHOAH IT WORKS</Subsection>
+        </div>
+      </Popup>
       <Table
         data={EventsData}
         columns={EventsColumns}

@@ -1,0 +1,15 @@
+.SelectorButton {
+  padding: 4px 8px;
+  border: 2px solid #0c120c;
+  font-size: 16px;
+  font-family: Montserrat;
+  font-weight: 500;
+  background-color: transparent;
+  border-radius: 10px;
+}
+
+.SelectorButton:hover {
+  color: #4f2efe;
+  border-color: #4f2efe;
+  cursor: pointer;
+}

@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import React from "react";
 import "./Popup.css";
 import { FiX } from "react-icons/fi";
 
@@ -15,22 +15,77 @@ const CloseIcon = ({ size, handleClick }) => {
   );
 };
 
-const LeftModalButton = ({ text, handleClick }) => {
+const LeftModalButton = ({ text, handleClick, disabled }) => {
   return (
-    <button className="LeftModalButton ModalButton" onClick={handleClick}>
+    <button
+      className={`LeftModalButton ModalButton ${disabled && "Disabled"}`}
+      onClick={handleClick}
+    >
       {text}
     </button>
   );
 };
-const RightModalButton = ({ text, handleClick }) => {
+const RightModalButton = ({ text, handleClick, disabled }) => {
   return (
-    <button className="RightModalButton ModalButton" onClick={handleClick}>
+    <button
+      className={`RightModalButton ModalButton ${disabled && "Disabled"}`}
+      onClick={handleClick}
+    >
       {text}
     </button>
   );
 };
 
-const Popup = ({ children, pages = 1, title = "Popup", shown, closeModal }) => {
+const Popup = ({ children, pages = 2, title = "Popup", shown, closeModal }) => {
+  const [backDisabled, setBackDisabled] = React.useState(true);
+  const [page, setPage] = React.useState(1);
+  const [save, setSave] = React.useState("Next");
+
+  function nextPage() {
+    if (page < pages) {
+      setPage(page + 1);
+      backDisabled && enableBack();
+      if (page == pages - 1) {
+        setSave("Save");
+      }
+    } else {
+      savePopup();
+    }
+  }
+  function prevPage() {
+    console.log(page);
+    if (page > 1) {
+      setSave("Next");
+      setPage(page - 1);
+      if (page == 2) {
+        disableBack();
+      }
+    }
+  }
+  function savePopup() {
+    resetModal();
+    closeModal();
+  }
+
+  function closeButton() {
+    resetModal();
+    closeModal();
+  }
+
+  function disableBack() {
+    setBackDisabled(true);
+  }
+
+  function enableBack() {
+    setBackDisabled(false);
+  }
+
+  function resetModal() {
+    setPage(1);
+    setSave("Next");
+    disableBack();
+  }
+
   return (
     <div>
       {shown ? (
@@ -38,10 +93,24 @@ const Popup = ({ children, pages = 1, title = "Popup", shown, closeModal }) => {
           <Overlay className="Overlay"></Overlay>
           <div className="Popup">
             <span className="ModalTitle">{title}</span>
-            <CloseIcon size={15} handleClick={closeModal}></CloseIcon>
-            {children}
-            <LeftModalButton text="Back"></LeftModalButton>
-            <RightModalButton text={"Next"}></RightModalButton>
+            <CloseIcon size={15} handleClick={closeButton}></CloseIcon>
+            {children.map((child, i) => (
+              <div
+                modalpage={i + 1}
+                style={{ display: i + 1 == page ? "block" : "none" }}
+              >
+                {child}
+              </div>
+            ))}
+            <LeftModalButton
+              text="Back"
+              disabled={backDisabled}
+              handleClick={prevPage}
+            ></LeftModalButton>
+            <RightModalButton
+              text={save}
+              handleClick={nextPage}
+            ></RightModalButton>
           </div>
         </div>
       ) : null}
