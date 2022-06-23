@@ -97,7 +97,7 @@ const Popup = ({ children, pages = 2, title = "Popup", shown, closeModal }) => {
             {children.map((child, i) => (
               <div
                 modalpage={i + 1}
-                style={{ display: i + 1 == page ? "block" : "none" }}
+                style={{ display: i + 1 === page ? "block" : "none" }}
               >
                 {child}
               </div>

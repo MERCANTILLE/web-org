@@ -9,7 +9,7 @@ import {
   Popup,
   SelectorButton,
   Subsection,
-  Header,
+  Dropdown,
 } from "../components";
 
 import { EventsData, EventsColumns } from "../data/EventsData";
@@ -50,7 +50,12 @@ const Home = () => {
           </Subsection>
         </div>
         <div>
-          <Subsection heading={"Discord"}>WHOAH IT WORKS</Subsection>
+          <Subsection heading={"Discord Server"}>
+            <Dropdown
+              text="Choose a Discord Server"
+              options={["Builderspace", "Klima DAO"]}
+            ></Dropdown>
+          </Subsection>
         </div>
       </Popup>
       <Table

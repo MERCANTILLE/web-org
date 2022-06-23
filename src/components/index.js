@@ -1,5 +1,3 @@
-import { Heading } from "./Subsection/Subsection";
-
 export { default as Table } from "./Table";
 export { default as Navbar } from "./Navbar";
 export { default as Button } from "./Button";
@@ -10,3 +8,4 @@ export { default as Popup } from "./Popup";
 export { default as SelectorButton } from "./SelectorButton";
 export { default as Subsection } from "./Subsection";
 export { Header } from "./Subsection";
+export { default as Dropdown } from "./Dropdown";
