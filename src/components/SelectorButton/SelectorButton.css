@@ -6,10 +6,17 @@
   font-weight: 500;
   background-color: transparent;
   border-radius: 10px;
+  display: flex;
+  gap: 8px;
+}
+
+.SelectorIcon {
+  height: 20px;
+  width: 20px;
 }
 
 .SelectorButton:hover {
-  color: #4f2efe;
-  border-color: #4f2efe;
+  /* color: #4f2efe !important; */
+  border-color: #4f2efe !important;
   cursor: pointer;
 }

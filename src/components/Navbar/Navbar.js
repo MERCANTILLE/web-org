@@ -16,15 +16,16 @@ const Navbar = () => {
       <Nav>
         <Bars />
         <NavMenu>
-          <NavLink to="/" activeStyle className={"Logo"}>
+          <NavLink to="/" className={"Logo"}>
             Finance Vote
           </NavLink>
-          <NavLink to="/" activeStyle>
-            Home
-          </NavLink>
+          <NavLink to="/">Feed</NavLink>
+          <NavLink to="/sources">Sources</NavLink>
           <NavLink to="/rules" activeStyle>
             Rules
           </NavLink>
+          <NavLink to="/members">Members</NavLink>
+          <NavLink to="/settings">Settings</NavLink>
         </NavMenu>
         <NavLink to="/" activeStyle className={"Logo Name"}>
           Masser

@@ -1,4 +1,4 @@
-input {
+.Input {
   font-family: Montserrat;
   font-size: 16px;
   padding: 12px 16px;
@@ -10,6 +10,12 @@ input {
   color: #0c120c;
 }
 
-input::placeholder {
+.Input::placeholder {
   color: #0c120c !important;
+}
+
+.Input:focus {
+  outline: none;
+  border-color: #4f2efe;
+  color: #4f2efe;
 }

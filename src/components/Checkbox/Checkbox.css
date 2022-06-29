@@ -1,0 +1,18 @@
+.Checkbox {
+  /* padding: 12px 16px; */
+  /* border: 2px solid #0c120c; */
+  font-size: 16px;
+  font-family: Montserrat;
+  font-weight: 500;
+  background-color: transparent;
+  border-radius: 5px;
+}
+.Checkbox label {
+  margin-left: 8px;
+}
+
+.Checkbox input {
+  border: 2px solid #0c120c;
+  margin-top: 8px;
+  background-color: transparent;
+}

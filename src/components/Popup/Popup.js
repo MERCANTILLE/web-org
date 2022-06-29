@@ -36,10 +36,18 @@ const RightModalButton = ({ text, handleClick, disabled }) => {
   );
 };
 
-const Popup = ({ children, pages = 2, title = "Popup", shown, closeModal }) => {
+const Popup = ({
+  children,
+  pages = 2,
+  title = "Popup",
+  shown,
+  closeModal,
+  selectedPage,
+}) => {
   const [backDisabled, setBackDisabled] = React.useState(true);
   const [page, setPage] = React.useState(1);
   const [save, setSave] = React.useState("Next");
+  const [pageTitle, setPageTitle] = React.useState("Title");
 
   function nextPage() {
     if (page < pages) {
@@ -86,19 +94,34 @@ const Popup = ({ children, pages = 2, title = "Popup", shown, closeModal }) => {
     disableBack();
   }
 
+  const firstPage = React.Children.toArray(children)[0];
+
   return (
     <div>
       {shown ? (
         <div className="ModalContainer">
           <Overlay className="Overlay"></Overlay>
           <div className="Popup">
-            <span className="ModalTitle">{title}</span>
             <CloseIcon size={15} handleClick={closeButton}></CloseIcon>
-            {children.map((child, i) => (
+            <div
+              style={{
+                display: page === 1 ? "block" : "none",
+              }}
+            >
+              <span className="ModalTitle">{firstPage.props.title}</span>
+              {firstPage}
+            </div>
+            {children.slice(1).map((child, i) => (
               <div
                 modalpage={i + 1}
-                style={{ display: i + 1 === page ? "block" : "none" }}
+                style={{
+                  display:
+                    page > 1 && child.props.id === selectedPage
+                      ? "block"
+                      : "none",
+                }}
               >
+                <span className="ModalTitle">{child.props.title}</span>
                 {child}
               </div>
             ))}

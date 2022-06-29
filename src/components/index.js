@@ -9,3 +9,5 @@ export { default as SelectorButton } from "./SelectorButton";
 export { default as Subsection } from "./Subsection";
 export { Header } from "./Subsection";
 export { default as Dropdown } from "./Dropdown";
+export { default as Checkbox } from "./Checkbox";
+export { default as Radio } from "./Radio";
