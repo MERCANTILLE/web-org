@@ -75,6 +75,15 @@ const Feed = () => {
               handleClick={() => selectNew("influenceNewOrg")}
             ></SelectorButton>
           </Subsection>
+          <Subsection heading={"Snapshot"}>
+            <SelectorButton
+              icon={snapshotIcon}
+              text="Track new org"
+              iid="snapshotNewOrg"
+              selectedPage={selected}
+              handleClick={() => selectNew("snapshotNewOrg")}
+            ></SelectorButton>
+          </Subsection>
           <Subsection heading={"Dework"}>
             <SelectorButton
               icon={deworkIcon}
