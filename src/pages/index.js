@@ -8,6 +8,7 @@ import {
   RightSubmenu,
   Popup,
   SelectorButton,
+  ActionCard,
   Subsection,
   Dropdown,
   Checkbox,
@@ -22,6 +23,7 @@ import snapshotIcon from "../img/snapshotIcon.png";
 
 import { EventsData, EventsColumns } from "../data/EventsData";
 import { ActionsData } from "../data/ActionsData";
+import { BehavioursData } from "../data/BehavioursData";
 
 const Feed = () => {
   const [modalShown, setModalShown] = React.useState(false);
@@ -55,6 +57,7 @@ const Feed = () => {
           id="initialPage"
           title="New data source"
           actionsData={ActionsData}
+          behavioursData={BehavioursData}
         ></NewActionPopup>
         {/* <div id="initialPage" title="New data source">
           <Subsection heading={"Discord"}>

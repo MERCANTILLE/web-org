@@ -14,9 +14,11 @@ import {
   Radio,
   SelectorButton,
   Input,
+  ActionCard,
+  BehaviourCard,
 } from "..";
 
-const NewActionPopup = ({ actionsData }) => {
+const NewActionPopup = ({ actionsData, behavioursData }) => {
   const [modalShown, setModalShown] = React.useState(false);
   const [selected, setSelected] = React.useState("initialPage");
 
@@ -27,19 +29,41 @@ const NewActionPopup = ({ actionsData }) => {
   function closeModal() {
     setModalShown(false);
   }
-  return actionsData.map((source) => (
-    <Subsection heading={source.source}>
-      {source.actions.map((action) => (
-        <SelectorButton
-          icon={source.icon}
-          handleClick={() => selectNew(action.source)}
-          text={action.name}
-          iid={action.name}
-          selectedPage={selected}
-        ></SelectorButton>
-      ))}
-    </Subsection>
-  ));
+
+  console.log(actionsData);
+  console.log(behavioursData);
+  return (
+    <div>
+      <Subsection heading="Relevant Actions">
+        {actionsData.map((source) =>
+          source.actions.map((action) => (
+            <ActionCard
+              icon={source.icon}
+              handleClick={() => selectNew(action.source)}
+              name={action.name}
+              iid={action.name}
+              app={source.source}
+              behaviours={action.behaviours}
+              selectedPage={selected}
+            ></ActionCard>
+          ))
+        )}
+      </Subsection>
+      <Subsection heading="Relevant Behaviours">
+        {behavioursData.map((behaviour) => (
+          <BehaviourCard
+            handleClick={() => selectNew(behaviour.behavior)}
+            name={behaviour.behaviour}
+            iid={behaviour.id}
+            actionum={behaviour.actionum}
+            sources={behaviour.sourcenum}
+            selectedPage={selected}
+          ></BehaviourCard>
+        ))}
+        {/*  */}
+      </Subsection>
+    </div>
+  );
   // <div id="discordCommand" title="Discord — new command">
   //   <Subsection heading="Command">
   //     <Input placeholder="/command"></Input>

@@ -1,5 +1,6 @@
 export const GoalsData = [
   {
+    id: 1,
     name: "People said “Thank you” in Discord",
     period: "month",
     goal: 100,
@@ -8,6 +9,7 @@ export const GoalsData = [
     actions: [3, 4, 7, 2],
   },
   {
+    id: 2,
     name: "New content items created",
     period: "month",
     goal: 20,
@@ -16,6 +18,7 @@ export const GoalsData = [
     actions: [3, 4, 7, 2],
   },
   {
+    id: 3,
     name: "Commits pushed to Github",
     period: "month",
     goal: 75,
@@ -24,6 +27,7 @@ export const GoalsData = [
     actions: [5],
   },
   {
+    id: 4,
     name: "Members in the community",
     period: "total",
     goal: 2000,

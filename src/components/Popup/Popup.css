@@ -5,6 +5,7 @@
   top: 0;
   bottom: 0;
   z-index: 100;
+  width: 640px;
 }
 
 .WorkingArea {
@@ -26,9 +27,9 @@
   left: 30%;
   top: 50%;
   transform: translateY(-50%);
-  background-color: #dcdcdc;
+  background-color: #e8e8e8;
   /* height: 300px; */
-  width: 640px;
+
   z-index: 10000;
 }
 

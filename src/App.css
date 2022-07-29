@@ -37,3 +37,10 @@
     transform: rotate(360deg);
   }
 }
+
+h3 {
+  font-size: 16px;
+  font-family: Montserrat;
+  color: #0c120c;
+  font-weight: 500;
+}
