@@ -20,9 +20,8 @@ const Navbar = () => {
             Finance Vote
           </NavLink>
           <NavLink to="/">Feed</NavLink>
-          <NavLink to="/sources">Sources</NavLink>
-          <NavLink to="/rules" activeStyle>
-            Rules
+          <NavLink to="/actions" activeStyle>
+            Actions
           </NavLink>
           <NavLink to="/members">Members</NavLink>
           <NavLink to="/settings">Settings</NavLink>

@@ -7,10 +7,18 @@ import {
   LeftSubmenu,
   RightSubmenu,
 } from "../components";
+import { ActionsData, ActionsColumns } from "../data/ActionsData";
 
-import { RulesData, RulesColumns } from "../data/RulesData";
-
-const Rules = () => {
+const Actions = () => {
+  const actionList = ActionsData.map((data) => [].concat([], data.actions));
+  var finalActions = [];
+  const concatActions = actionList.forEach((element) => {
+    element.forEach((act) => {
+      finalActions.push(act);
+    });
+  });
+  console.log(finalActions);
+  // console.log(actionList);
   return (
     <div>
       <MenuStripe>
@@ -22,9 +30,10 @@ const Rules = () => {
           <Input placeholder="Filter"></Input>
         </RightSubmenu>
       </MenuStripe>
+
       <Table
-        data={RulesData}
-        columns={RulesColumns}
+        data={finalActions}
+        columns={ActionsColumns}
         hover={true}
         striped={false}
       />
@@ -32,4 +41,4 @@ const Rules = () => {
   );
 };
 
-export default Rules;
+export default Actions;

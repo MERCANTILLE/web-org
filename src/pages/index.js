@@ -12,6 +12,7 @@ import {
   Dropdown,
   Checkbox,
   Radio,
+  NewActionPopup,
 } from "../components";
 
 import discordIcon from "../img/discordIcon.png";
@@ -20,6 +21,7 @@ import deworkIcon from "../img/deworkIcon.png";
 import snapshotIcon from "../img/snapshotIcon.png";
 
 import { EventsData, EventsColumns } from "../data/EventsData";
+import { ActionsData } from "../data/ActionsData";
 
 const Feed = () => {
   const [modalShown, setModalShown] = React.useState(false);
@@ -49,7 +51,12 @@ const Feed = () => {
         </RightSubmenu>
       </MenuStripe>
       <Popup shown={modalShown} closeModal={closeModal} selectedPage={selected}>
-        <div id="initialPage" title="New data source">
+        <NewActionPopup
+          id="initialPage"
+          title="New data source"
+          actionsData={ActionsData}
+        ></NewActionPopup>
+        {/* <div id="initialPage" title="New data source">
           <Subsection heading={"Discord"}>
             <SelectorButton
               icon={discordIcon}
@@ -93,7 +100,7 @@ const Feed = () => {
               handleClick={() => selectNew("deworkNewOrg")}
             ></SelectorButton>
           </Subsection>
-        </div>
+        </div> */}
         <div id="discordCommand" title="Discord — new command">
           <Subsection heading="Command">
             <Input placeholder="/command"></Input>

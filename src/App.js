@@ -3,7 +3,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Feed from "./pages";
-import Rules from "./pages/rules";
+import Rules from "./pages/actions";
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" exact element={<Feed />} />
-        <Route path="/rules" element={<Rules />} />
+        <Route path="/actions" element={<Rules />} />
       </Routes>
     </Router>
   );

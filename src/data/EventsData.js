@@ -1,5 +1,4 @@
 const Token = "FVT";
-const Unit = "W";
 
 export const EventsData = [
   {

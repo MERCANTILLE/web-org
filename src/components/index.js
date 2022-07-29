@@ -11,3 +11,4 @@ export { Header } from "./Subsection";
 export { default as Dropdown } from "./Dropdown";
 export { default as Checkbox } from "./Checkbox";
 export { default as Radio } from "./Radio";
+export { default as NewActionPopup } from "./NewActonPopup";

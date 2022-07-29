@@ -1,0 +1,86 @@
+export const GoalsData = [
+  {
+    id: 1,
+    name: "beautifulbutterfly101",
+    role: "clevel",
+    earnedNew: 2.355323,
+    earnedTotal: 36.5075065,
+    actionsNew: 23,
+    diffActionsNew: 14,
+    latest: [3, 4, 7, 2],
+    profile:
+      "https://secure.gravatar.com/avatar/aa28bbe9ad98835e4d66c10e3a03320d?s=192&d=mm&r=g",
+  },
+  {
+    id: 2,
+    name: "lazymeercat616",
+    role: "adept",
+    earnedNew: 4.239248,
+    earnedTotal: 18.934872,
+    actionsNew: 12,
+    diffActionsNew: 9,
+    latest: [3, 4, 7, 2],
+    profile:
+      "https://secure.gravatar.com/avatar/aa28bbe9ad98835e4d66c10e3a03320d?s=192&d=mm&r=g",
+  },
+  {
+    id: 3,
+    name: "yellowmouse215",
+    role: "clevel",
+    earnedNew: 7.847277,
+    earnedTotal: 48.926389,
+    actionsNew: 7,
+    diffActionsNew: 6,
+    latest: [3, 4, 7, 2],
+    profile:
+      "https://secure.gravatar.com/avatar/aa28bbe9ad98835e4d66c10e3a03320d?s=192&d=mm&r=g",
+  },
+  {
+    id: 4,
+    name: "brownbear646",
+    role: "initiate",
+    earnedNew: 0.728492,
+    earnedTotal: 1.089487,
+    actionsNew: 15,
+    diffActionsNew: 4,
+    latest: [3, 4, 7, 2],
+    profile:
+      "https://secure.gravatar.com/avatar/aa28bbe9ad98835e4d66c10e3a03320d?s=192&d=mm&r=g",
+  },
+  {
+    id: 5,
+    name: "crazyfish228",
+    role: "Initiate",
+    earnedNew: 1.573939,
+    earnedTotal: 1.573939,
+    actionsNew: 28,
+    diffActionsNew: 16,
+    latest: [3, 4, 7, 2],
+    profile:
+      "https://secure.gravatar.com/avatar/aa28bbe9ad98835e4d66c10e3a03320d?s=192&d=mm&r=g",
+  },
+  {
+    id: 6,
+    name: "beautifullion765",
+    role: "clevel",
+    earnedNew: 10.837717,
+    earnedTotal: 82.482429,
+    actionsNew: 18,
+    diffActionsNew: 9,
+    latest: [3, 4, 7, 2],
+    profile:
+      "https://secure.gravatar.com/avatar/aa28bbe9ad98835e4d66c10e3a03320d?s=192&d=mm&r=g",
+  },
+  {
+    id: 6,
+    name: "purpleleopard757",
+    role: "adept",
+    earnedNew: 0.243661,
+    earnedTotal: 3.347622,
+    actionsNew: 3,
+    diffActionsNew: 2,
+    latest: [3, 4, 7, 2],
+    profile:
+      "https://secure.gravatar.com/avatar/aa28bbe9ad98835e4d66c10e3a03320d?s=192&d=mm&r=g",
+  },
+];

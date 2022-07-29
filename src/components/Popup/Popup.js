@@ -1,6 +1,6 @@
 import React from "react";
 import "./Popup.css";
-import { FiX } from "react-icons/fi";
+// import { FiX } from "react-icons/fi";
 
 const Overlay = () => {
   return <div className="Overlay"></div>;
@@ -47,13 +47,13 @@ const Popup = ({
   const [backDisabled, setBackDisabled] = React.useState(true);
   const [page, setPage] = React.useState(1);
   const [save, setSave] = React.useState("Next");
-  const [pageTitle, setPageTitle] = React.useState("Title");
+  // const [pageTitle, setPageTitle] = React.useState("Title");
 
   function nextPage() {
     if (page < pages) {
       setPage(page + 1);
       backDisabled && enableBack();
-      if (page == pages - 1) {
+      if (page === pages - 1) {
         setSave("Save");
       }
     } else {
@@ -65,7 +65,7 @@ const Popup = ({
     if (page > 1) {
       setSave("Next");
       setPage(page - 1);
-      if (page == 2) {
+      if (page === 2) {
         disableBack();
       }
     }
