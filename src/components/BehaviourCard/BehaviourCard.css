@@ -42,8 +42,8 @@ body {
 .BehaviourCardName {
   margin-top: 0;
   margin-bottom: 4px;
+  bottom: 0;
   position: absolute;
-  margin-bottom: 10px;
 }
 
 .BehaviourBehaviours {
